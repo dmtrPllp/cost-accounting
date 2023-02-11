@@ -22,7 +22,7 @@ function App() {
   return (
     <div>
       <h1>React!</h1>
-      <Costs arr = {costs} />
+      <Costs costs = {costs} />
     </div>
   );
 }

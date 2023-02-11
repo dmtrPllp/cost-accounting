@@ -1,18 +1,17 @@
 import CostItem from "./CostItem";
+import Card from "./Card.js";
 import './css/Costs.css';
 
 function Costs(props) {
-    const costs = new Array(props);
-
-    if (props) {
+    if (props.costs) {
         return (
-            <div className="costs">
+            <Card className="costs">
                 {
-                    costs[0].arr.map((item) => {
+                    props.costs.map((item) => {
                         return (<CostItem costDate={item.date} title={item.title} price={item.price} />);
                     })
                 }
-            </div>
+            </Card>
         )
     } else {
         return null;
